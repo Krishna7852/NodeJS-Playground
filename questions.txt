@@ -1,0 +1,39 @@
+Assignment 1 (Use NodeJs (Typescript preferred) / Python as the main programming language to solve/discuss the questions below):
+
+Q4) Write the smallest possible python / Nodejs script, which parses this file and puts the questions in correct order into another file. Your approach should be generic with minimal assumptions.
+Q2) If you are a Django / KoaJS expert attempt Q2A else attempt Q2B. 
+    Q2A) Create a form with 3 fields: Name, State, City and Pincode (all required fields). The three fields are conditional drop-downs (i.e. selecting state, fills in the city drop down list and selecting city fills in the list of pincodes). The conditions are guided by the following dictionary: (Use Django forms or NodeJS Joi npm package)
+
+    {
+        'Andaman Nicobar': {
+            'Car Nicobar': [744301, 744302, 744303, 744304],
+            'Diglipur': [744108, 744109, 744110, 744267],
+            'Nancowrie': [744202, 744203, 744205, 744208]
+        },
+        'Andhra Pradesh': {
+            'Adilabad': [504309, 504310, 504312, 504313],
+            'Asifabad': [504273, 504274, 504275, 504276, 504277],
+            'Sitagondi': [504308, 504501, 504502, 504503]
+        },
+        'Karnataka': {
+            'Anekal': [562106, 562107, 562109, 562111, 562112],
+            'Bangalore': [562149, 560096, 560064, 560079]
+        },
+        'Maharashtra': {
+            'Akola': [444001, 444002, 444003, 444004, 444007, 444009],
+            'Amravati': [444602, 444603, 444604, 444609, 444614]
+        }
+    }
+
+We don't want to load this dict in the front-end because it might get really big. There's a submit button on this page which saves the data in a model.
+Part 1 - Implement this using Django or KoaJS (Do not use any frontend javascript)
+Part 2 - If there is an error in the page (e.g. leave the Name field blank), the state of the page should be maintained so that while the error is shown on the Name field, the data filed by the user in the other fields is not lost.
+
+    Q2B) Code a python / nodes script which can scrape the movies currently in the "Box office" from IMDB's homepage (https://www.imdb.com/chart/boxoffice/), list them and get the list of cast for each of them. The script should be able to take a parameter to specify that only show details of TOP 'N' movies. 
+
+Q1) Create a django model or typeorm entity file or a UML diagram for a very basic social network. Tables : user, post, comments, friends. Write your thoughts on how will you scale this to millions of users (give less than 10 brief points)?
+Q3) Write two scripts in python / Nodejs which run in parallel (as in each script in a different terminal). The first script needs to generate a random number and push it to redis at random time-intervals, the second script needs to get this number from redis as soon as the first script pushes it and print it. (e.g. one script says 'sent 2332' the other says 'received 2332').
+Q5) Write a decorator function/class in Django or KoaJS which when applied to a (Django View) or (KoaJS Controller), returns 405 HTTP error on a GET request but behaves normally on POST.
+
+Bonus Question
+Dockerise (Q2) and push to a version controlled repository.
